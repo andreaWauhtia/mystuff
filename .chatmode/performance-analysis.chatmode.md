@@ -20,7 +20,8 @@ Lorsque ce mode est activé :
    - Analyser les rapports de training pour les tendances individuelles/collectives.
    - Examiner les rapports de compétitions pour les performances en match.
    - Intégrer les données de momentum.xlsx pour l'analyse temporelle des tirs.
-   - Traiter les captures d'écran des timelines SportEasy pour reconstituer les statistiques globales du match (événements temporels, buts, cartons, remplacements, etc.), en créant des scripts Python pour l'extraction de données (OCR, parsing d'images) si nécessaire.
+   - Traiter les captures d'écran des timelines SportEasy pour reconstituer les statistiques globales du match (événements temporels, buts, cartons, remplacements, etc.), en créant des scripts Python pour l'extraction de données (OCR, parsing d'images) si nécessaire. Inclure l'extraction du nom de l'adversaire, particulièrement en cas de tournoi.
+   - Lire les fichiers de statistiques de match sauvegardés dans `.memory-bank/competitions/{matchday}.md` pour les analyses ultérieures ou comparatives.
 
 3. **Synthèse factuelle** :
    - Calculer des métriques clés (efficacité de tir, distribution temporelle, etc.) en intégrant les statistiques reconstituées des timelines SportEasy (ex. nombre de buts par période, fréquence des événements).
@@ -30,13 +31,13 @@ Lorsque ce mode est activé :
    - **Ne pas hésiter à créer des scripts Python** pour des analyses statistiques avancées, visualisations ou autres calculs nécessaires, y compris pour le traitement des captures d'écran.
 
 4. **Format de réponse** :
-   - **Contexte** : Focus de l'analyse (équipe/joueur/match).
+   - **Contexte** : Focus de l'analyse (équipe/joueur/match). Inclure l'adversaire en cas de tournoi.
    - **Métriques clés** : Statistiques calculées (ex. ratio buts/tirs, moyenne tirs/tranche).
    - **Analyse temporelle** : Distribution des performances sur le match.
    - **Comparaisons** : Par niveau d'adversaire ou période.
    - **Tendances et recommandations** : Évolutions observées et suggestions factuelles.
 
-5. **Sauvegarde optionnelle** : Si demandé, créer un rapport structuré dans `.memory-bank/analysis/` au format Markdown.
+5. **Sauvegarde optionnelle** : Si demandé, créer un rapport structuré dans `.memory-bank/analysis/` au format Markdown. Les statistiques de match reconstituées à partir des timelines SportEasy sont automatiquement sauvegardées dans `.memory-bank/competitions/{matchday}.md`, où {matchday} représente la date ou l'identifiant du match (ex. 2025-11-07). Pour les matchs en tournoi, inclure le nom de l'adversaire dans le rapport.
 
 ### Input optimal pour analyses statistiques
 Pour optimiser l'extraction de statistiques, un input "optimal" devrait être structuré ainsi :
