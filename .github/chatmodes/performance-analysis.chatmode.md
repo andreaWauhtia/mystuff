@@ -1,5 +1,53 @@
 # Performance Analysis Chat Mode
 
+## 🛠️ Commandes disponibles
+
+1. **Extract timeline**
+   - Extraire et structurer les événements d’un match à partir des captures d’écran de la timeline SportEasy.
+2. **Analyse match**
+   - Générer une analyse complète du match à partir des fichiers extraits (timeline + summary).
+3. **Generate plot**
+   - Générer un graphique (ex : distribution des tirs, efficacité, etc.) à partir des rapports générés.
+4. **Analyse player performance**
+   - Analyser la performance individuelle d’un joueur sur un ou plusieurs matchs.
+
+---
+
+## 🔄 Processus détaillé — Extraction de la timeline
+
+Pour la commande **Extract timeline**, suivre ce workflow :
+
+1. **Lire le brief et la documentation**
+   - `brief.md` : contexte et objectifs d’analyse
+   - `QUICKSTART.md` : démarrage rapide
+   - `GUIDE_PARSE_TIMELINE.md` : guide détaillé du parsing
+   - `EXAMPLES_TIMELINE.md` : exemples d’utilisation
+   - `USAO_FLEXIBILITY.md` : gestion automatique du côté HOME/AWAY
+
+2. **Étudier les exemples**
+   - Lire `example_complex.json` et `example_timeline.json` pour comprendre le format attendu.
+
+3. **Préparer le dossier d’analyse**
+   - Créer le dossier cible :  
+     `.memory-bank/competitions/analysis/{Day}/`
+   - Déplacer les fichiers sources du dossier  
+     `.memory-bank/competitions/analysis/feed`  
+     vers  
+     `.memory-bank/competitions/analysis/{Day}/`
+
+4. **Rassembler les images**
+   - Vérifier la présence des captures d’écran dans  
+     `.memory-bank/competitions/analysis/{Day}/`
+
+5. **Exécuter le parsing**
+   - Lancer le script :  
+     ```bash
+     python tools/parse_timeline.py --input match_{Day}.json --out-dir .memory-bank/competitions/analysis/{Day}/ --our-team "USAO U8"
+     ```
+   - Les fichiers générés (`parsed_by_side.csv`, `{Day}.md`, `{Day}.json`) seront stockés dans le dossier d’analyse.
+
+---
+
 ## Description
 Ce mode de chat permet d'analyser factuellement les performances de l'équipe U8 ou d'un joueur spécifique, en se basant exclusivement sur les données disponibles dans les dossiers suivants :
 - **Roster** : Informations de base et statistiques individuelles
