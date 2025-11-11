@@ -14,7 +14,10 @@ Lineup de départ: Louis (gardien), Tiago (pointe basse), Nestor (pointe gauche)
 
 ## Remarque ## 
 - Hugo n'a pas eu de temps de jeux suite à une crise d'angoisse.
-- Ignore les tirs non cadrés de Tiago, c'est une erreur d'encodage (1 pour Auguste et 1 pour Nestor)
+- [LLM Instruction]Ignore les tirs non cadrés de Tiago, c'est une erreur d'encodage (1 pour Auguste et 1 pour Nestor)
 - Meilleure performance collective de la saison jusqu'à la 45ème
-- Tiago beaucoup de passe clés.
+- Le travail paie! 2-3 séquences ou le ballon circule de gauche à droite en repassant par l'arrière
+- Beaucoup de mouvement
+- Pressing bien mené, les adversaires ont eu du mal à sortir
+- Tiago: 2 contrôles de ballons aérien réussi.
 

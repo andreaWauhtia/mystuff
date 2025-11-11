@@ -126,7 +126,7 @@
 - **Solution appliquée** : 
 - **Résultat** : 
 
-### � Bilan exercices & Capitalisation
+### 🏆 Bilan exercices & Capitalisation
 
 #### Top exercices de la séance
 1. **[Nom exercice]** (drills/[fichier]) → Pertinence ⭐⭐⭐⭐⭐ | Efficacité ⭐⭐⭐⭐⭐
@@ -201,15 +201,8 @@
 
 ## 🤖 Commandes du Chatmode
 
-### `/validate [drill_name]`
-**Usage** : Valide un drill de la banque `/drills/` et juge de sa pertinence pour les U8
-**Format** : `/validate Circulation du ballon.pdf`
-**Sortie** : Analyse détaillée de pertinence selon critères U8 + recommandations
-
-### `/genreport [date]`
-**Usage** : Génère un rapport complet d'analyse de séance
-**Format** : `/genreport 2025-11-03`
-**Sortie** : Rapport sauvegardé dans `.memory-bank/trainings/report/YYYY-MM-DD-training-report.md`
+### Guide d'utilisation des commandes
+Pour utiliser ces commandes, tapez simplement le nom de la commande suivi des paramètres requis dans le chat. Les rapports générés sont automatiquement sauvegardés dans le dossier `.memory-bank/trainings/report/`.
 
 ### `/validate [drill_name]`
 Analyse la pertinence d'un drill selon les critères U8 :
@@ -223,13 +216,47 @@ Analyse la pertinence d'un drill selon les critères U8 :
 **Exemple** : `/validate Drill physico technique.pdf`
 
 ### `/genreport [date]`
-Génère automatiquement un rapport structuré dans `.memory-bank/trainings/report/`
-Basé sur le template complet avec évaluation des drills utilisés.
+Lance un processus interactif guidé pour générer automatiquement un rapport structuré dans `.memory-bank/trainings/report/`.
+
+**Format de la date** : Utilisez le format YYYY-MM-DD (année-mois-jour). Par exemple, pour aujourd'hui : `/genreport 2025-11-11`
+
+**Comment ça marche** :
+1. Tapez la commande avec la date de la séance.
+2. L'agent vous posera des questions étape par étape sur le déroulement de l'entraînement :
+   - Informations générales (type de séance, durée, présents, conditions)
+   - Objectifs de la séance
+   - Exercices réalisés (avec évaluation de pertinence et efficacité)
+   - Observations individuelles et de groupe
+   - Ajustements en cours de séance
+   - Bilan et recommandations pour la prochaine séance
+   - Communication parents et KPI
+3. **Évaluation automatique** : L'agent analyse les drills proposés et les observations récoltées pour calculer automatiquement les notes par domaine (technique individuelle, jeu collectif, attitude & comportement) sur une échelle de 1 à 5 étoiles.
+4. Le rapport final sera sauvegardé dans `.memory-bank/trainings/report/YYYY-MM-DD-training-report.md`.
+
+**Astuce** : Si vous préférez, vous pouvez préparer vos réponses à l'avance ou répondre "passer" pour les sections non pertinentes.
 
 **Exemple** : `/genreport 2025-11-03`
 
 ### `/listdrills`
 Affiche le catalogue complet des drills disponibles avec brève description.
+
+### `/plan`
+Lance un processus interactif pour planifier une séance d'entraînement personnalisée.
+
+**Comment ça marche** :
+1. Choisissez la base de planification : objectifs à atteindre (technique, tactique, comportemental) OU observations des derniers matchs (points forts/faibles).
+2. L'agent vous posera des questions pour affiner :
+   - Priorités spécifiques (ex. : améliorer la conduite de balle, renforcer le soutien collectif)
+   - Conditions disponibles (météo, terrain, effectif, matériel)
+   - Niveau du groupe et adaptations U8
+3. L'agent recommande automatiquement :
+   - Type de séance (technique, tactique, corrective, etc.)
+   - Sélection d'exercices adaptés depuis la banque `/drills/`
+   - Structure temporelle (échauffement, technique, opposition, retour au calme)
+   - Objectifs clairs et indicateurs de réussite
+4. Le plan est généré et sauvegardé dans `.memory-bank/trainings/plans/YYYY-MM-DD-training-plan.md`.
+
+**Exemple** : `/plan` (puis suivez les instructions interactives)
 
 ---
 

@@ -5,16 +5,16 @@
 ### Informations générales
 
 - **Date** : 2025-11-10
-- **Type de séance** : Technique
-- **Durée** : Session interrompue à 19h00 (environ 45-60 min)
-- **Présents** : 7/14 joueurs (Nestor, Maxence, Tiago, Lilou, Robin, Lysian, Auguste)
-- **Conditions** : Météo frais, sec au début, grosse pluie vers 18h30. Coach Andréa absent, remplacé par Steve.
+- **Type de séance** : Corrective/détente
+- **Durée** : 75min
+- **Présents** : 7/14 joueurs (Nestor, Tiago, Robin, Lysian, Auguste, Lilou, Maxence)
+- **Conditions** : Fraiche, grosse pluie vers 18h45. Andréa absent, Steve a assuré seul
 
 ### 🎯 Objectifs de la séance
 
-- [ ] Objectif technique principal :
-- [ ] Objectif tactique/collectif :
-- [ ] Objectif comportemental :
+- [x] Objectif technique principal : Améliorer la justesse sur le dosage des passes, cohésion d'équipe
+- [ ] Objectif tactique/collectif : N.A
+- [x] Objectif comportemental : Groupe à l'écoute, cohésion.
 
 ### 📊 Évaluation par domaine
 
@@ -79,35 +79,33 @@
 - **Exercice** : Echauffement cloche pied
 - **Source** : 📁 drills/Echauffement cloche pied.png
 - **Pertinence** : ⭐⭐⭐⭐⭐ (Adaptation U8 / Objectif séance / Engagement groupe)
-- **Efficacité réelle** : ⭐⭐⭐⭐⭐
+- **Efficacité réelle** : N.A
 - **Adaptation appliquée** : Démonstration par le coach, rythme adapté au froid
 - **À retenir** : Bon engagement initial, ludique et technique
 
 #### Partie technique (20-25 min)
 
-- **Exercice** : Chaise musicale (prévu)
-- **Source** : 📁 drills/Chaise musicale.png
+- **Exercice** : Doser les ballons
+- **Source** : 📁 drills/Doser les ballons.png
 - **Pertinence** : ⭐⭐⭐⭐⭐ (Adaptation U8 / Objectif séance / Engagement groupe)
-- **Efficacité réelle** : N/A (non réalisé - interruption météo)
-- **Adaptation appliquée** :
-- **À retenir** : Prévu mais non effectué
+- **Efficacité réelle** : ⭐⭐⭐⭐⭐
+- **Adaptation appliquée** : Groupe appliqué
+- **À retenir** : Points positifs / Points à améliorer
 
 #### Jeu/Opposition (15-20 min)
 
-- **Exercice** : Doser les ballons (prévu)
-- **Source** : 📁 drills/Doser les ballons.png
+- **Exercice** : Tour du monde
+- **Source** : 📁 drills/Tour du monde.png
 - **Pertinence** : ⭐⭐⭐⭐⭐ (Adaptation U8 / Objectif séance / Engagement groupe)
-- **Efficacité réelle** : N/A (non réalisé - interruption météo)
-- **Adaptation appliquée** :
-- **À retenir** : Prévu mais non effectué
+- **Efficacité réelle** : ⭐⭐⭐⭐⭐
+- **Adaptation appliquée** : Lilou gagne le premier tour, Tiago le deuxième
+- **À retenir** : Points positifs / Points à améliorer
 
 #### Retour au calme (5 min)
 
-- **Activité** : Tour du monde (prévu) - Remplacé par débrief au vestiaire
+- **Activité** : Débrief au vestiaire sur le match de samedi et théorie
 - **Pertinence** : ⭐⭐⭐⭐⭐
-- **Notes** : Débrief de samedi et rappels des principes de mouvement
-
-### 🎯 Analyse de pertinence des exercices (pré-séance)
+- **Notes** : Interruption due à la grosse averse et le froid, Steve a amené les enfants au vestiaire pour revenir sur le match de samedi et faire un peu de théorie
 
 ### 🎯 Analyse de pertinence des exercices (pré-séance)
 
@@ -212,16 +210,14 @@
 
 #### Attitude (moyenne du groupe 1-5)
 
-- **Écoute** :
-- **Fair-play** :
-- **Responsabilité** :
-- **Motivation** :
+- **Écoute** : [5]
+- **Fair-play** : [5]
+- **Responsabilité** : [5]
+- **Motivation** : [5]
 
 #### Touches de balle efficaces (observation simplifiée)
 
-- **Très actifs** : [Noms]
-- **Moyennement actifs** : [Noms]
-- **Peu actifs** : [Noms]
+- **Très actifs** : [Tous]
 
 ### 📝 Notes libres
 
@@ -229,63 +225,3 @@
 - Bon engagement initial avec l'échauffement.
 - Débrief positif au vestiaire sur la séance de samedi et principes de mouvement.
 - Coach Andréa absent, remplacé par Steve qui a bien géré la situation.
-
----
-
-## 🤖 Commandes du Chatmode
-
-### `/validate [drill_name]`
-
-**Usage** : Valide un drill de la banque `/drills/` et juge de sa pertinence pour les U8
-**Format** : `/validate Circulation du ballon.pdf`
-**Sortie** : Analyse détaillée de pertinence selon critères U8 + recommandations
-
-### `/genreport [date]`
-
-**Usage** : Génère un rapport complet d'analyse de séance
-**Format** : `/genreport 2025-11-03`
-**Sortie** : Rapport sauvegardé dans `.memory-bank/trainings/report/YYYY-MM-DD-training-report.md`
-
-### `/validate [drill_name]`
-
-Analyse la pertinence d'un drill selon les critères U8 :
-
-- **Adaptation âge** : Complexité, durée, compréhension
-- **Objectif technique** : Alignement avec priorités (conduite/passe/contrôle)
-- **Aspect collectif** : Travail en groupe, communication
-- **Engagement** : Motivation, plaisir, répétitions
-- **Matériel** : Faisabilité avec équipement disponible
-- **Progression** : Évolution possible selon niveau groupe
-
-**Exemple** : `/validate Drill physico technique.pdf`
-
-### `/genreport [date]`
-
-Génère automatiquement un rapport structuré dans `.memory-bank/trainings/report/`
-Basé sur le template complet avec évaluation des drills utilisés.
-
-**Exemple** : `/genreport 2025-11-03`
-
-### `/listdrills`
-
-Affiche le catalogue complet des drills disponibles avec brève description.
-
----
-
-## 📚 Template d'analyse rapide (pour prise de notes pendant la séance)
-
-**Date** : **\_** | **Présents** : **\_/14 | **Type** : \_\_\_**
-
-**Exercices** :
-
-- Échauffement : drills/**\_** → Pertinence ⭐ | Efficacité ⭐
-- Technique : drills/**\_** → Pertinence ⭐ | Efficacité ⭐
-- Opposition : drills/**\_** → Pertinence ⭐ | Efficacité ⭐
-
-**Technique** : Conduite ⭐ | Passe ⭐ | Contrôle ⭐
-**Collectif** : Soutien ⭐ | Démarquage ⭐ | Espaces ⭐  
-**Attitude** : Écoute ⭐ | Fair-play ⭐ | Responsabilité ⭐ | Plaisir ⭐
-
-**+ Points forts** :
-**- À améliorer** :
-**→ Prochaine séance** : drills/**\_** (échauff.) | drills/**\_** (tech.) | drills/**\_** (oppos.)

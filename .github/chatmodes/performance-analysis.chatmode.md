@@ -81,7 +81,7 @@ sequenceDiagram
 - **Input**: Screenshots from SportEasy timeline in `.memory-bank/competitions/feed/*.jpg`.
 - **Process**:
   - Read screenshots from `.memory-bank/competitions/feed/` (priority source).
-  - Read docs: `brief.md`, `QUICKSTART.md`, `GUIDE_PARSE_TIMELINE.md`, `EXAMPLES_TIMELINE.md`, `USAO_FLEXIBILITY.md`.
+  - Read docs: `brief.md`, `QUICKSTART.md`, `GUIDE_PARSE_TIMELINE.md`, `README_OCR.md`, `EXAMPLES_TIMELINE.md`, `USAO_FLEXIBILITY.md`.
   - Study examples for JSON format: `{"match_header": "TEAM1 score-score TEAM2", "events": [{"minute": int, "type": str, "player": str, "side": "left|right"}]}`
   - Create folder: `.memory-bank/competitions/analysis/{matchday}/`.
   - Run script: `python tools/parse_timeline.py --input match_{matchday}.json --out-dir .memory-bank/competitions/analysis/{matchday}/ --our-team "USAO U8"`
