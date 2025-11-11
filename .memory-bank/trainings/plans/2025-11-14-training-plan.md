@@ -6,7 +6,7 @@
 - **Type de séance** : Préparation match (focus défensif et finition)
 - **Durée** : 75 min
 - **Conditions** : Météo correcte, terrain naturel un peu meuble (attention aux glissades, privilégier exercices contrôlés)
-- **Effectif prévu** : /14 joueurs (adapter selon présence)
+- **Effectif prévu** : /11 joueurs (adapter selon présence)
 - **Mental** : Mode guerrier - séance intense et motivante pour préparer le match du 19 novembre contre équipe supérieure
 
 ## 🎯 Objectifs de la séance

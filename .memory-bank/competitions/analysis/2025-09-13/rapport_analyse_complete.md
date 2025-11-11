@@ -2,80 +2,79 @@
 **Jour de match**: 2025-09-13  
 **Adversaire**: RES.Orgeotoise  
 **Score**: 5 - 12
-**Conclusion**: Large victoire à l'extérieur, attaque prolifique, défense parfois prise à défaut (5 buts encaissés).
+**Conclusion**: Score 5-12. Victoire d'USAO U8.
 
 ## Résumé exécutif
-### Présence
-*Non renseigné*
+## Présence ##
+Louis, Lilou, Robin, Nathan, Tiago, Auguste, Lysian, Nestor,Maxence,Hugo
+## Absence ##
+Firmin
+## Shift ##
 
-### Absence
-*Non renseigné*
-
-### Shift
-*Non renseigné*
-
-### Remarque
-*Non renseigné*
+## Remarque ##
+Manque d'intensité sur la première période.
+Réception passive qui punit sur un terrain avec l'herbe trop haute.
+Plus de gnac en 2ème et on commence à voir des mouvements
 
 ## Métriques Offensives (USAO)
-| Métrique            | Valeur | Analyse |
-|---------------------|--------|---------|
-| Buts marqués        | 12     | Attaque très efficace, score élevé. |
-| Tirs (hors buts)    | 19     | Volume de tirs très important. |
-| Tirs non cadrés     | 19     | Beaucoup de tentatives hors cadre. |
-| Malchance           | 0      | Aucun tir signalé comme malchance (poteau, transversale). |
-| Efficacité (%)      | 39%    | 12 buts / (12 + 19) = 12/31 ≈ 39%. |
+| Métrique | Valeur | Analyse |
+|----------|--------|---------|
+| Buts marqués | 12 | Attaque à améliorer |
+| Tirs (hors buts) | 12 | Volume de tirs hors cadre |
+| Tirs arrêtés | 7 | Tirs défensifs adverses |
+| Malchance | 0 | Aucun tir signalé comme malchance |
+| Efficacité (%) | 38.7% | 12/31 |
 
 ## Métriques Défensives (Adversaire)
-| Métrique            | Valeur | Analyse |
-|---------------------|--------|---------|
-| Buts concédés       | 5      | Défense parfois en difficulté. |
-| Tirs adverses (saves) | 3    | 3 arrêts de Louis, adversaire dangereux. |
-| Tirs adverses hors cadre | 4 | 4 tirs adverses hors cadre. |
-| Malchance adverse   | 0      | Aucun événement de malchance adverse. |
-| Efficacité adverse (%) | 42% | 5 buts / (5 + 3 + 4) = 5/12 ≈ 42%. |
+| Métrique | Valeur | Analyse |
+|----------|--------|---------|
+| Buts concédés | 5 | Défense à renforcer |
+| Tirs adverses (saves) | 0 | Tirs adverses arrêtés |
+| Tirs adverses hors cadre | 3 | Tirs adverses manqués |
+| Malchance adverse | 0 | Aucun |
+| Efficacité adverse (%) | 62.5% | 5/8 |
 
 ## Performances individuelles
 ### 🔥 Les Buteurs
-| Joueur                   | Buts | Tirs (hors buts) | Efficacité |
-|-------------------------|------|------------------|------------|
-| Auguste Robinet         | 5    | 3                | 63%        |
-| Tiago Wauthia           | 3    | 0                | 100%       |
-| Nestor Arnould          | 2    | 5                | 29%        |
-| Maxence Jonckheere      | 2    | 2                | 50%        |
-| Lilou Douny             | 0    | 1                | 0%         |
-| Hugo Dumay              | 0    | 2                | 0%         |
+| Joueur | Buts | Tirs (hors buts) | Efficacité |
+|--------|------|------------------|------------|
+| Auguste Robinet | 5 | 3 | 62% |
+| Tiago Wauthia | 3 | 0 | 100% |
+| Maxence Jonckheere | 2 | 2 | 50% |
+| Nestor Arnould | 2 | 4 | 33% |
 
 ### Les passes décisives
-*Non disponibles dans les données extraites*
+| Joueur | Passes décisives |
+|--------|------------------|
+
 
 ## Répartition temporelle
-- 1ère période (0-24') : 6 buts marqués, 3 buts encaissés
-- 2ème période (25'-49') : 6 buts marqués, 2 buts encaissés
+- 1ère période (0-22') : 4 buts marqués, 3 buts encaissés
+- 2ème période (23'-44') : 8 buts marqués, 2 buts encaissés
 
 ## Répartition par tranche de 5 minutes
- 0-5' : 4 buts (1', 2', 2', 3')
- 5-10' : 1 but (7')
- 10-15' : 1 but (12')
- 15-20' : 0 but
- 20-25' : 1 but (20')
- 25-30' : 3 buts (26', 27', 28')
- 30-35' : 2 buts (31', 33')
- 35-40' : 1 but (37')
- 40-45' : 0 but
- 45-50' : 3 buts (45', 47', 49')
+ 0-5' : 3 buts (1, 2, 3)
+ 5-10' : 0 buts
+ 10-15' : 0 buts
+ 15-20' : 0 buts
+ 20-25' : 1 but (20)
+ 25-30' : 3 buts (26, 27, 28)
+ 30-35' : 2 buts (31, 33)
+ 35-40' : 0 buts
+ 40-45' : 0 buts
+
 
 ## Points forts
-1. Attaque très prolifique, efficacité collective.
-2. Plusieurs joueurs impliqués dans les buts.
-3. Capacité à marquer dans toutes les périodes du match.
+1. Potentiel offensif
+2. À améliorer défensivement
 
 ## Améliorations possibles
-1. Précision des tirs hors cadre à améliorer.
-2. Défense à renforcer (5 buts encaissés).
-3. Documenter les passes décisives si possible.
+1. Augmenter l'efficacité
+2. Renforcer la défense
 
 ## Recommandations
-1. Travailler la finition pour réduire le nombre de tirs hors cadre.
-2. Renforcer la rigueur défensive, notamment sur les débuts de période.
-3. Compléter les données de présence/absence pour une analyse individuelle plus fine.
+1. Analyser les données pour optimiser le jeu
+
+---
+
+*Rapport généré le 2025-11-11 09:05:15*

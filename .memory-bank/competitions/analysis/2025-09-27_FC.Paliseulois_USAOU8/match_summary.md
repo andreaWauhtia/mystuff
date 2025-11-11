@@ -8,4 +8,5 @@ Nestor
 
 ## Remarque ##
 - Auguste a passé presque tout ses buts en tirant de loin, contrairement à ce qu'on souhaitait voir.
-- Autobut de Paliseul attribué à Lilou 
+- Autobut de Paliseul attribué à Lilou
+- Bonne circulation du ballon

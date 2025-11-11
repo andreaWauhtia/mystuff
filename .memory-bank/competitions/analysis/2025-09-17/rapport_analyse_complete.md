@@ -2,78 +2,84 @@
 **Jour de match**: 2025-09-17  
 **Adversaire**: Jeunesse MSN Tilleur  
 **Score**: 4 - 11
-**Conclusion**: Lourde défaite à domicile, adversaire très supérieur en volume et efficacité offensive. USAO a manqué d'occasions et a subi une pression constante.
+**Conclusion**: Score 4-11. Défaite d'USAO U8.
 
 ## Résumé exécutif
-### Présence
+## Présence ##
 Louis, Tiago, Nathan, Nestor, Maxence, Auguste, Lilou
 
-### Absence
+## Absence ##
 Robin, Lysian
 
-### Shift
-*Non renseigné*
-
-### Remarque
-*Non renseigné*
+## Shifts ##
+## Remarque ## 
+Équipe beaucoup plus matures en face (combinaison travaillée à l'entrainement sur corner)
+Prise à 3 bien coordonné de l'adversaire sur Tiago et Nestor.
+Repositionnement défensif cata.
+Tiago trop bas en pointe basse et visiblement stressé.
+Nestor qui sort très très frustré.
+Nous avons une double arme nucléaire sur coup franc (Tiago, Nestor).
+Nathan adroit sur le 1vs1 en contre.
+Maxence un poil lent dans la transition rapide.
 
 ## Métriques Offensives (USAO)
-| Métrique            | Valeur | Analyse |
-|---------------------|--------|---------|
-| Buts marqués        | 4      | Ratio de conversion élevé, mais trop peu d'occasions créées. |
-| Tirs (hors buts)    | 6      | Volume de tirs très faible. |
-| Tirs non cadrés     | 2      | Peu de tentatives hors cadre, mais volume global trop bas. |
-| Malchance           | 0      | Aucun tir signalé comme malchance. |
-| Efficacité (%)      | 67%    | 4 buts / (4 + 2) = 4/6 ≈ 67%. |
+| Métrique | Valeur | Analyse |
+|----------|--------|---------|
+| Buts marqués | 4 | Attaque à améliorer |
+| Tirs (hors buts) | 2 | Volume de tirs hors cadre |
+| Tirs arrêtés | 3 | Tirs défensifs adverses |
+| Malchance | 0 | Aucun tir signalé comme malchance |
+| Efficacité (%) | 44.4% | 4/9 |
 
 ## Métriques Défensives (Adversaire)
-| Métrique            | Valeur | Analyse |
-|---------------------|--------|---------|
-| Buts concédés       | 11     | Défense dépassée, adversaire très efficace. |
-| Tirs adverses (saves) | 3    | 3 arrêts de Louis, mais volume d'occasions adverses très élevé. |
-| Tirs adverses hors cadre | 4 | 4 tirs adverses hors cadre. |
-| Malchance adverse   | 0      | Aucun événement de malchance adverse. |
-| Efficacité adverse (%) | 73% | 11 buts / (11 + 3 + 4) = 11/18 ≈ 61%. |
+| Métrique | Valeur | Analyse |
+|----------|--------|---------|
+| Buts concédés | 11 | Défense à renforcer |
+| Tirs adverses (saves) | 1 | Tirs adverses arrêtés |
+| Tirs adverses hors cadre | 3 | Tirs adverses manqués |
+| Malchance adverse | 0 | Aucun |
+| Efficacité adverse (%) | 73.3% | 11/15 |
 
 ## Performances individuelles
 ### 🔥 Les Buteurs
-| Joueur                   | Buts | Tirs (hors buts) | Efficacité |
-|-------------------------|------|------------------|------------|
-| Nestor Arnould          | 2    | 1                | 67%        |
-| Tiago Wauthia           | 1    | 0                | 100%       |
-| Nathan Blyweert Doumont | 1    | 0                | 100%       |
-| Maxence Jonckheere      | 0    | 1                | 0%         |
+| Joueur | Buts | Tirs (hors buts) | Efficacité |
+|--------|------|------------------|------------|
+| Nestor Arnould | 2 | 1 | 67% |
+| Tiago Wauthia | 1 | 0 | 100% |
+| Nathan Blyweert Doumont | 1 | 0 | 100% |
 
 ### Les passes décisives
-*Non disponibles dans les données extraites*
+| Joueur | Passes décisives |
+|--------|------------------|
+
 
 ## Répartition temporelle
-- 1ère période (0-24') : 1 but marqué, 6 buts encaissés
-- 2ème période (25'-49') : 3 buts marqués, 5 buts encaissés
+- 1ère période (0-22') : 1 buts marqués, 6 buts encaissés
+- 2ème période (23'-44') : 3 buts marqués, 5 buts encaissés
 
 ## Répartition par tranche de 5 minutes
- 0-5' : 0 but
- 5-10' : 0 but
- 10-15' : 0 but
- 15-20' : 0 but
- 20-25' : 1 but (22')
- 25-30' : 0 but
- 30-35' : 1 but (34')
- 35-40' : 1 but (40')
- 40-45' : 0 but
- 45-50' : 1 but (49')
+ 0-5' : 0 buts
+ 5-10' : 0 buts
+ 10-15' : 0 buts
+ 15-20' : 0 buts
+ 20-25' : 1 but (22)
+ 25-30' : 0 buts
+ 30-35' : 1 but (34)
+ 35-40' : 0 buts
+ 40-45' : 1 but (40)
+
 
 ## Points forts
-1. Efficacité offensive sur les rares occasions créées.
-2. Quelques arrêts décisifs du gardien malgré la pression.
+1. Potentiel offensif
+2. À améliorer défensivement
 
 ## Améliorations possibles
-1. Augmenter le volume de tirs et d'occasions créées.
-2. Renforcer la défense pour limiter les vagues adverses.
-3. Documenter les passes décisives si possible.
+1. Augmenter l'efficacité
+2. Renforcer la défense
 
 ## Recommandations
-1. Travailler la construction offensive pour générer plus de tirs.
-2. Revoir l'organisation défensive et la gestion des transitions.
-3. Maintenir la motivation malgré la lourde défaite, s'appuyer sur l'efficacité offensive constatée.
+1. Analyser les données pour optimiser le jeu
 
+---
+
+*Rapport généré le 2025-11-11 09:05:18*

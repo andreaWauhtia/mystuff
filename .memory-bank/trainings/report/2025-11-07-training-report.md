@@ -6,7 +6,7 @@
 ## 📋 Informations générales
 - **Type de séance** : Technique / Tactique / Opposition
 - **Durée** : Non spécifiée
-- **Présents** : 14/14 joueurs (tout le monde)
+- **Présents** : 11/11 joueurs (tout le monde)
 - **Conditions** : Météo agréable, terrain naturel boueux et bosselé
 
 ## 🎯 Objectifs de la séance
@@ -169,7 +169,7 @@
 ## 📊 Indicateurs KPI
 
 ### Présence
-- **Taux de présence** : 100% (14/14)
+- **Taux de présence** : 100% (11/11)
 - **Retards** : 0
 - **Absences justifiées** : 0
 

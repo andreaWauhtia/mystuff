@@ -7,7 +7,7 @@
 - **Date** : 2025-11-10
 - **Type de séance** : Corrective/détente
 - **Durée** : 75min
-- **Présents** : 7/14 joueurs (Nestor, Tiago, Robin, Lysian, Auguste, Lilou, Maxence)
+- **Présents** : 7/11 joueurs (Nestor, Tiago, Robin, Lysian, Auguste, Lilou, Maxence)
 - **Conditions** : Fraiche, grosse pluie vers 18h45. Andréa absent, Steve a assuré seul
 
 ### 🎯 Objectifs de la séance

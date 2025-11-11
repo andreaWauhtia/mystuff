@@ -12,4 +12,9 @@ Second lineup: Firmin (gardien), Nathan (aile gauche), Nestor (pointe haute), Li
 43' Tiago In (Pointe basse), Auguste Out, Lilou Out, Nathan In (aile droite)
 
 ## Remarque ##
--Grosse bataille du milieu de terrain
+- Grosse bataille du milieu de terrain
+- Maxence a compris que le pressing sur la pointe basse arrière permettait d'empêcher le jeu adverse.
+- Grosse résilience de l'équipe (Lilou ++, Nestor ++)
+- Louis pas dedans, Firmin a beaucoup de réflexe
+- Tiago a eu une grosse opposition en face (+15cm)
+- Adaptation compliquée quand Libramont est passé à 2 attaquants.

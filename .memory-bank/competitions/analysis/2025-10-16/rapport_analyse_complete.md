@@ -1,80 +1,79 @@
 # Rapport d'analyse: USAO U8 VS Bertrix
 **Jour de match**: 2025-10-16  
 **Adversaire**: Bertrix  
-**Score**: 7-3
-**Conclusion**: Victoire mature contre une très belle équipe de Bertrix.
+**Score**: 7 - 3
+**Conclusion**: Score 7-3. Victoire d'USAO U8.
 
 ## Résumé exécutif
-Louis, Tiago, Lysian, Nathan, Hugo, Nestor, Maxence, Robin présents. Absents : Firmin, Lilou, Auguste.
-- Hugo est sorti en cours de route (coup sur la tête).
+## Présence ##
+Louis, Tiago, Lysian, Nathan, Hugo, Nestor, Maxence, Robin
+## Absence ##
+Firmin, Lilou, Auguste
+## Shift ##
+## Remarque ##
+- Hugo est sorti en court de route car coup sur la tête et n'a plus voulu joué.
 - Tiago met un corner rentrant sur la latte.
-- Match contre une très belle équipe de Bertrix, victoire mature.
+- Match contre une très belle équipe de Bertriw
+- Victoire mature, on a punit des qu'on le pouvait
 
 ## Métriques Offensives (USAO)
-| Métrique            | Valeur | Analyse |
-|---------------------|--------|---------|
-| Buts marqués        | 7      | Très bonne efficacité offensive. |
-| Tirs cadrés arrêtés | 0      | Aucun tir arrêté par le gardien adverse (pas d'événement explicite). |
-| Tirs hors cadre     | 1      | 1 tir à côté (Nathan, 48'). |
-| Poteaux             | 1      | 1 poteau (Tiago, 24'). |
-| Efficacité          | 7/9 ≈ 77,8% | Excellente (buts/(buts+tirs hors cadre+poteaux)). |
+| Métrique | Valeur | Analyse |
+|----------|--------|---------|
+| Buts marqués | 7 | Attaque efficace |
+| Tirs (hors buts) | 3 | Volume de tirs hors cadre |
+| Tirs arrêtés | 0 | Tirs défensifs adverses |
+| Malchance | 0 | Aucun tir signalé comme malchance |
+| Efficacité (%) | 70.0% | 7/10 |
 
-## Métriques Défensives (Bertrix)
-| Métrique            | Valeur | Analyse |
-|---------------------|--------|---------|
-| Buts concédés       | 3      | Défense solide, mais 3 buts encaissés. |
-| Tirs adverses arrêtés | 3    | 3 arrêts de Louis (9', 14', 37'). |
-| Tirs adverses cadrés | 2      | 2 tirs cadrés arrêtés (3', 7'). |
-| Efficacité adverse  | 3/5 = 60% | Bertrix a marqué 3 fois sur 5 occasions franches. |
+## Métriques Défensives (Adversaire)
+| Métrique | Valeur | Analyse |
+|----------|--------|---------|
+| Buts concédés | 3 | Défense à renforcer |
+| Tirs adverses (saves) | 0 | Tirs adverses arrêtés |
+| Tirs adverses hors cadre | 2 | Tirs adverses manqués |
+| Malchance adverse | 0 | Aucun |
+| Efficacité adverse (%) | 60.0% | 3/5 |
 
 ## Performances individuelles
 ### 🔥 Les Buteurs
-| Joueur              | Buts | Tirs | Efficacité |
-|---------------------|------|------|------------|
-| Maxence Jonckheere  | 3    | 3    | 100% |
-| Nestor Arnould      | 2    | 2    | 100% |
-| Robin Lambert       | 2    | 2    | 100% |
+| Joueur | Buts | Tirs (hors buts) | Efficacité |
+|--------|------|------------------|------------|
+| Maxence Jonckheere | 3 | 0 | 100% |
+| Nestor Arnould | 2 | 0 | 100% |
+| Robin Lambert | 2 | 0 | 100% |
 
 ### Les passes décisives
-| Joueur              | Passes décisives |
-|---------------------|------------------|
-| Hugo Dumay          | 1                |
-| Nathan Blyweert Doumont | 1           |
-| Nestor Arnould      | 1                |
+| Joueur | Passes décisives |
+|--------|------------------|
+
 
 ## Répartition temporelle
-- Mi-temps 1 : 3 buts marqués (3', 8', 15'), 1 but encaissé (30')
-- Mi-temps 2 : 4 buts marqués (31', 33', 36', 49'), 2 buts encaissés (31', 44')
+- 1ère période (0-22') : 3 buts marqués, 0 buts encaissés
+- 2ème période (23'-44') : 4 buts marqués, 3 buts encaissés
 
 ## Répartition par tranche de 5 minutes
- 0-5' : 1 but (3')
- 5-10' : 1 but (8')
- 10-15' : 1 but (15')
- 15-20' : 0
- 20-25' : 0
- 25-30' : 1 but encaissé (30')
- 30-35' : 2 buts (31', 33'), 1 but encaissé (31')
- 35-40' : 1 but (36'), 1 arrêt (37')
- 40-45' : 1 but encaissé (44')
- 45-50' : 1 but (49')
+ 0-5' : 1 but (3)
+ 5-10' : 1 but (8)
+ 10-15' : 0 buts
+ 15-20' : 1 but (15)
+ 20-25' : 0 buts
+ 25-30' : 0 buts
+ 30-35' : 2 buts (31, 33)
+ 35-40' : 1 but (36)
+ 40-45' : 0 buts
+
 
 ## Points forts
-1. Efficacité offensive remarquable (77,8%).
-2. Multiples buteurs et passes décisives.
-3. Bonne gestion des temps forts/faibles.
+1. Efficacité offensive
+2. À améliorer défensivement
 
 ## Améliorations possibles
-1. Limiter les occasions adverses (3 buts encaissés).
-2. Mieux défendre sur les temps faibles (buts encaissés en fin de mi-temps).
+1. Maintenir la performance
+2. Renforcer la défense
 
 ## Recommandations
-1. Continuer à varier les buteurs et les circuits de passes.
-2. Travailler la concentration défensive sur la durée.
+1. Analyser les données pour optimiser le jeu
 
 ---
 
-## Sources
-- 2025-10-16.json
-- parsed_by_side.csv
-- match_summary.md
-- 2025-10-16.md
+*Rapport généré le 2025-11-11 09:07:21*

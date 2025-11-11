@@ -9,4 +9,5 @@ J'ai ensuite réparti le temps de jeu et le positionnement plus sagement.
 
 ## Remarque ##
 Hugo n'a pas eu de temps de jeu suite à une crise d'angoisse.
-Construction pauvre, beaucoup de but sur récupération
+Construction pauvre, beaucoup de but sur récupération.
+Début de match canon avec le 1er shift, ils n'ont pas vu le ballon.

@@ -6,7 +6,7 @@
 ## 📋 Informations générales
 - **Type de séance** : Technique / Tactique / Opposition
 - **Durée** : Non spécifiée
-- **Présents** : 14/14 joueurs (tout le monde)
+- **Présents** : 11/11 joueurs (tout le monde)
 - **Conditions** : Non spécifiées
 
 ## 🎯 Objectifs de la séance

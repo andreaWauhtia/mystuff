@@ -2,7 +2,7 @@
 **Jour de match**: 2025-11-08
 **Adversaire**: RES.Orgeotoise saison  
 ** Score**: 16-3
-**Conclusion **: Victoire écrasante avec une domination offensive exceptionnelle, marquant 16 buts contre 3 concédés.
+**Conclusion**: Score 16-3. Victoire d'USAO U8.
 
 ## Résumé exécutif
 ## Présence ##
@@ -97,7 +97,7 @@ Victoire 16-3 démontrant une domination offensive avec 16 buts marqués et une 
 3. Assurer la participation de tous les joueurs
 
 ---
-  
+
 ## Sources
 - 2025-11-08_USAOU8.json
 - parsed_by_side.csv
