@@ -74,3 +74,10 @@ graph TD
 All outputs are persisted in the appropriate `.memory-bank/` subdirectories for traceability.
 
 This mode ensures coaches have both conversational support and powerful autonomous analysis capabilities.
+
+## Usage Restrictions
+
+### Agent Protection
+- **No Editing of Agents**: The agent files (`performance-analyser.agent.md`, `player-scout.agent.md`, `training-analyser.agent.md`) are protected and must not be edited, modified, or altered in any way. All interactions with agents must occur through the defined commands in this chat mode.
+- **Scope Limitation**: All requests and commands must strictly align with the available commands and workflows defined in this `coach_assistant.chatmode.md` file, as well as the capabilities outlined in `performance-analyser.agent.md` and `player-scout.agent.md`. Requests outside this framework (e.g., general programming tasks, unrelated analyses, or modifications to agent behavior) will not be processed.
+- **Enforcement**: The chat mode will reject or redirect any attempt to deviate from the established coaching assistant framework. Use only the slash commands provided for agent invocations and data-driven insights.
