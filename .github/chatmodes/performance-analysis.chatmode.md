@@ -6,8 +6,9 @@ This Chat Mode equips GitHub Copilot as a **semi-autonomous** AI agent for factu
 **⚡ EXECUTION MODE**: The agent executes workflow phases automatically with **ONE mandatory stop**: after creating `match_summary.md` template (Phase 2), the agent pauses for user to fill presence/absence/shift/remarks data. After user confirmation, execution resumes automatically through analysis and archiving.
 
 **🔴 CRITICAL INSTRUCTIONS**: 
-1. When `/extract-timeline` or `/analyze-match` is invoked, the agent MUST automatically list and read ALL screenshots from `.memory-bank/feed/` using vision capabilities as the first mandatory step. Do NOT ask user to provide screenshots manually - they are already available in the feed folder.
+1. When `/extract-timeline` or `/analyze-match` is invoked, the agent MUST **immediately examine each screenshot image** from `.memory-bank/feed/` as the first mandatory step. **The agent has native vision capabilities and can analyze image content directly.** Do NOT use text-based file reading tools on .jpg files. Do NOT ask user to provide screenshots manually - they are already available in the feed folder.
 2. **MATCH DATE DETECTION**: The screenshot filename date (e.g., `Screenshot_20251111_...jpg`) is NOT the match date. The agent MUST extract the actual match date from the SportEasy interface visible IN the screenshot content. This date determines the `{matchday}` variable for all folder/file naming throughout the workflow.
+3. **NO STALLING**: After listing screenshots, the agent MUST proceed immediately to analyze them using its vision capabilities. If the agent stops after listing files without examining image content, this is a workflow failure.
 
 ### Key Capabilities
 - **Data Extraction**: Parse SportEasy timeline screenshots from `.memory-bank/feed/` to extract match events (goals, shots, cards, substitutions).
@@ -52,14 +53,15 @@ The process follows a linear, validated flow. Use Mermaid diagrams for clarity:
 ### Extraction and Parsing Flow
 ```mermaid
 graph TD
-    A[MANDATORY: List ALL .jpg files in .memory-bank/feed/] --> B[Read each screenshot using vision]
-    B --> C[Agent reads brief/docs for format guidance]
-    C --> D[Study examples: example_complex.json, example_timeline.json]
-    D --> E[Extract events from screenshots into JSON structure]
-    E --> F[Prepare analysis folder: .memory-bank/competitions/analysis/{matchday}/]
-    F --> G[Run parse_timeline.py script]
-    G --> H[Outputs: parsed_by_side.csv, {matchday}.md, {matchday}.json]
-    H --> I[Agent validates totals and sides]
+    A[List ALL .jpg files in .memory-bank/feed/] --> B[Examine each screenshot using native vision]
+    B --> C[Extract match date from SportEasy interface in images]
+    C --> D[Agent reads brief/docs for format guidance]
+    D --> E[Study examples: example_complex.json, example_timeline.json]
+    E --> F[Extract events from screenshots into JSON structure]
+    F --> G[Prepare analysis folder: .memory-bank/competitions/analysis/{matchday}/]
+    G --> H[Run parse_timeline.py script]
+    H --> I[Outputs: parsed_by_side.csv, {matchday}.md, {matchday}.json]
+    I --> J[Agent validates totals and sides]
 ```
 
 ### Analysis Flow
@@ -89,7 +91,9 @@ sequenceDiagram
 
     U->>A: /analyze-match 2025-11-07 USAO U8
     A->>A: Check for data in .memory-bank/competitions/analysis/2025-11-07/
-    A->>A: If missing, auto-trigger Phase 0 (read screenshots)
+    A->>A: If missing, examine screenshots in .memory-bank/feed/
+    A->>A: Extract match date from SportEasy interface
+    A->>A: Create match_{matchday}.json from screenshot analysis
     A->>A: Run Phase 1 (parse_timeline.py)
     A->>A: Create match_summary.md template with empty sections
     A->>U: ⏸️ Please fill match_summary.md (Présence, Absence, Shift, Remarque). Reply when done.
@@ -106,19 +110,20 @@ sequenceDiagram
 ### Phase 0: Read Screenshot and create JSON (AUTOMATIC - MANDATORY FIRST STEP)
 - **Input**: Screenshots from SportEasy timeline in `.memory-bank/feed/*.jpg`.
 - **Process**:
-  - **CRITICAL**: Agent MUST automatically list and read ALL screenshots from `.memory-bank/feed/` using vision capabilities before proceeding.
-  - **⚠️ MATCH DATE EXTRACTION**: The screenshot filename date (e.g., `Screenshot_20251111_...jpg`) is NOT the match date. The agent MUST read the actual match date displayed IN the SportEasy screenshot interface (usually shown at the top or in the match header). Use THIS date as `{matchday}` for all folder/file naming.
-  - Read reference docs from `.memory-bank/`: `brief.md`, `timelineDataExtractions.md`, `QUICKSTART.md`, `GUIDE_PARSE_TIMELINE.md`, `EXAMPLES_TIMELINE.md`, `USAO_FLEXIBILITY.md`.
-  - Study existing examples in workspace root: `example_complex.json`, `example_timeline.json` for exact JSON format: `{"match_header": "TEAM1 score-score TEAM2", "events": [{"minute": int, "type": str, "player": str, "side": "left|right"}]}`
-  - Extract ALL events visible in screenshots (goals, shots, saves, cards, substitutions) with exact minute and side.
-  - Define JSON structure based on studied examples.
-  - Create JSON file: `match_{matchday}.json` in `.memory-bank/feed/` where `{matchday}` is the ACTUAL match date read from the screenshot content, NOT the screenshot filename date.
+  - **STEP 1 - LIST SCREENSHOTS**: List all `.jpg` files in `.memory-bank/feed/` to identify available screenshots.
+  - **STEP 2 - ANALYZE IMAGES**: Examine each screenshot image to extract match information. **The agent has native vision capabilities and can see image content directly without special tools.**
+  - **STEP 3 - MATCH DATE EXTRACTION**: From the SportEasy interface visible IN the screenshots, extract the actual match date (usually at the top of the timeline or in the match header). **THIS is the {matchday} date** - NOT the screenshot filename date (e.g., `Screenshot_20251111_...jpg`).
+  - **STEP 4 - REFERENCE DOCS**: Read reference docs from `.memory-bank/`: `brief.md`, `timelineDataExtractions.md`, `QUICKSTART.md`, `GUIDE_PARSE_TIMELINE.md`, `EXAMPLES_TIMELINE.md`, `USAO_FLEXIBILITY.md`.
+  - **STEP 5 - STUDY EXAMPLES**: Study existing examples in workspace root: `example_complex.json`, `example_timeline.json` for exact JSON format: `{"match_header": "TEAM1 score-score TEAM2", "events": [{"minute": int, "type": str, "player": str, "side": "left|right"}]}`
+  - **STEP 6 - EXTRACT EVENTS**: From all viewed screenshots, extract ALL events visible (goals, shots, saves, cards, substitutions) with exact minute and side (left/right).
+  - **STEP 7 - CREATE JSON**: Create JSON file: `match_{matchday}.json` in `.memory-bank/feed/` where `{matchday}` is the ACTUAL match date extracted from screenshot content in STEP 3.
 - **Output**: `match_{matchday}.json` with raw events extracted from screenshots.
 - **Validation**: 
-  - Agent reports number of screenshots processed (e.g., "Read 7 screenshots from .memory-bank/feed/").
-  - **Agent explicitly states the match date extracted from screenshot content** (e.g., "Match date identified: 2025-11-08").
-  - Agent verifies match_header format matches examples.
-  - Agent confirms all visible events were captured with proper side attribution (left/right).
+  - Agent reports: "Analyzed [X] screenshots from .memory-bank/feed/"
+  - **Agent explicitly states the match date extracted from screenshot content** (e.g., "Match date identified from SportEasy interface: 2025-11-08")
+  - Agent verifies match_header format matches examples
+  - Agent confirms all visible events were captured with proper side attribution (left/right)
+- **⚠️ CRITICAL**: The agent can see images directly. Do not attempt to use text-based file reading tools on .jpg files.
 ### Phase 1: Preparation and Extraction
 - **Input**: `match_{matchday}.json` created in Phase 0 (located in `.memory-bank/feed/`), where `{matchday}` is the ACTUAL match date extracted from screenshot content.
 - **Process**:
