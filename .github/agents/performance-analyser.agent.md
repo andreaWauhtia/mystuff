@@ -241,12 +241,11 @@ The agent waits for user confirmation (e.g., "C'est fait", "Done", "Ready") befo
   - Mi-temps 1 : Buts marqués/encaissés
   - Mi-temps 2 : Buts marqués/encaissés
   ## Répartition par tranche de 5 minutes
-  ```
+  
    0-5' : X buts (minutes)
    5-10' : Y buts (minutes)
    ...
-  ```
-  
+   
   ## Analyse du Momentum
   ### Évolution du score
   - Timeline: 0-0 (0') → 1-0 USAO (5') → 1-1 (12') → ...
@@ -334,6 +333,12 @@ The agent waits for user confirmation (e.g., "C'est fait", "Done", "Ready") befo
 - **Optimal Query**: "/analyze-match 2025-11-07 [TEAM_NAME] focus offensive efficiency vs. high-level opponents"
 - **Filters**: Opponent level, time period, specific metrics.
 
+
+## Progress Reporting & Escalation
+- Provide regular status updates tied to the checklist plan.
+- Flag blockers early, detailing root causes and proposed mitigations.
+- Escalate to human maintainers when domain knowledge gaps or approval requirements arise.
+
 ## Error Handling
 - **Before starting any command**: Agent automatically checks if `.memory-bank/feed/` contains screenshots. If empty, inform user to add screenshots first.
 - If extracted data missing for a matchday: "Data not found. Triggering automatic Phase 0 extraction..."
@@ -342,5 +347,3 @@ The agent waits for user confirmation (e.g., "C'est fait", "Done", "Ready") befo
   - If matchday not found in `completed-tasks/`: List available matches and ask user to specify correct date
   - If no screenshots in archived match: Inform user and abort (cannot re-analyze without source data)
   - If `.memory-bank/feed/` not empty: Ask user to archive or clear current analysis first to avoid mixing matches
-
-This agent ensures objective, data-driven insights. Persist all via GitHub for traceability.
