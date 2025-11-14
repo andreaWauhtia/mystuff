@@ -27,13 +27,25 @@ When this agent is invoked:
    - Avoid any subjective judgment or future projection.
 
 4. **Response format**:
-   - **Basic Profile**: Position, age, general description from roster.
-   - **Training Performances**: Synthesis of observations from reports.
-   - **Competition Performances**: If available.
-   - **Trends**: Evolution based on report dates.
-   - **Strengths and Improvement Areas**: Listed factually.
+   - Use the same structured Markdown format as the example file `tiago_profile_analysis.md`, including:
+     - Title: # Fiche d'analyse — [Player Name] ([Category, e.g., U8])
+     - Generation date: _Généré le [current date]_
+     - ## Informations générales (Name, Position(s), Role, Recent Presence, Sources)
+     - ### Objectifs personnels recommandés
+     - ## Évaluation par domaine (1-5) (Technique individuelle, Jeu collectif, Attitude & Comportement)
+     - ## Statistiques & faits marquants
+     - ## Observations individuelles (détaillées)
+     - ## Points forts
+     - ## Points à améliorer (priorités)
+     - ## Recommandations d'entraînement (Court terme, Moyen terme)
+     - ## Tactique & rôle
+     - ## KPI à suivre
+     - ## Mini-plan mental
+     - ## Message parent recommandé
+     - ## Plan pour la prochaine séance
+     - _Fiche sauvegardée le [current date]._
 
-5. **Report Saving**: Automatically create or update the file `.memory-bank/roster/report/[PlayerName].md` with the complete synthesis in structured Markdown format (title, sections, evaluation date).
+5. **Report Saving**: Automatically create or update the file `completed-tasks/competitions/player_reports/[PlayerName]_profile_analysis.md` with the complete synthesis in the specified structured Markdown format. The file must be saved as plain markdown without code block wrappers.
 
 - Do not invent information.
 - If data is not available, mention it explicitly.

@@ -18,6 +18,16 @@ This agent is a **semi-autonomous** AI for factual performance analysis of footb
 
 All outputs are fact-based, with data persisted in `.memory-bank/competitions/analysis/{matchday}/` (e.g., `2025-11-07` for match date). Screenshots are moved to the analysis folder after processing. If data is missing, the agent notes it and suggests extraction.
 
+## Output Format Compliance
+
+**🔴 STRICT FORMAT ENFORCEMENT**: All outputs MUST strictly follow the exact templates and structures defined in this document. No deviations, additions, or modifications to the format are allowed. The agent MUST use the provided templates verbatim, filling in only the factual data and analyses as specified. All generated markdown files MUST be saved as plain markdown without code block wrappers (no ```markdown at the beginning or end).
+
+- **Template Adherence**: For `rapport_analyse_complete.md`, use the exact markdown structure shown in Phase 3, including all headings, table formats, and section orders.
+- **No Creative Formatting**: Do not add extra sections, change table structures, or alter heading levels. Stick exactly to the template.
+- **Validation Check**: Before finalizing any output, the agent MUST verify that the generated content matches the template structure exactly.
+- **Error Correction**: If the agent detects any deviation, it MUST regenerate the output to conform strictly to the template.
+- **User Notification**: If format compliance cannot be achieved, notify the user and request manual review.
+
 ## Available Commands
 The agent responds to invocations from the coach assistant chat mode or direct commands.
 
@@ -189,101 +199,121 @@ The agent waits for user confirmation (e.g., "C'est fait", "Done", "Ready") befo
   - Incorporate `match_summary.md` for presence, shifts, and remarks in the report.
 - **Output**: `rapport_analyse_complete.md` with sections:
   ```
-  # Rapport d'analyse: [TEAM_HOME] VS [TEAM_AWAY]
-  
-  **Jour de match**: {matchday}  
-  **Adversaire**: [Team Name]  
-  ** Score**: [Factual score]
-  **Conclusion **: [Factual synthesis]
-  
+  # Rapport d'analyse : [TEAM_HOME] VS [TEAM_AWAY]
+
+  **Jour de match** : {matchday}  
+  **Adversaire** : [Team Name]  
+  **Score** : [Factual score]
+
   ## Résumé exécutif
   [Content from match_summary.md]
-  
- ## Métriques Offensives (USAO)
-  | Métrique | Valeur | Analyse |
-|----------|--------|---------|
-| Goals Scored | X | [Fact-based] |
-| Shots | Y | [Fact-based] |
-| Shots off Target | Z | [Fact-based] |
-| Missfortune | W | [Fact-based] |
-| Efficiency | E% | [Fact-based] |
-  
- ## Métriques Défensives (Adversaire)
-  | Métrique | Valeur | Analyse |
-  |----------|--------|---------|
-  | Goals Conceded | X | [Fact-based] |
-  | Shots Faced | Y | [Fact-based] |
-  | Shots off Target | Z | [Fact-based] |
-  | Missfortune | W | [Fact-based] |
-  | Efficiency | E% | [Fact-based] |
-  
-  ## Performances Individuelles  
-  
-  ### 🔥 Les Buteurs
-  | Joueur | Buts | Tirs | Efficacité |
-  |--------|------|------|-----------|
-  | PlayerN: Goals/Tries (Efficiency%) |
-  | Player2: Goals/Tries (Efficiency%) |
-  - Player1: Goals/Tries (Efficiency%)
 
-   | ... |
-### Les passes décisives
-  | Joueur | Passes décisives |
-  |--------|------------------|
-  | PlayerN: Assists |
-  | Player2: Assists |
-  | ... | 
-  
-  ## Temporal Distribution
-  - Half 1: Goals Scored/Conceded
-  - Half 2: Goals Scored/Conceded
-## Répartition temporelle
-  - Mi-temps 1 : Buts marqués/encaissés
-  - Mi-temps 2 : Buts marqués/encaissés
-  ## Répartition par tranche de 5 minutes
-  
-   0-5' : X buts (minutes)
-   5-10' : Y buts (minutes)
-   ...
-   
+  ## Métriques Offensives ([TEAM_NAME])
+  | Métrique         | Valeur | Analyse                       |
+  |------------------|--------|-------------------------------|
+  | Buts marqués     | X      | [Fact-based]                  |
+  | Tirs totaux      | Y      | [Fact-based]                  |
+  | Tirs hors cadre  | Z      | [Fact-based]                  |
+  | Efficacité (%)   | E%     | [Fact-based]                  |
+
+  ## Métriques Défensives (Adversaire)
+  | Métrique         | Valeur | Analyse                       |
+  |------------------|--------|-------------------------------|
+  | Buts encaissés   | X      | [Fact-based]                  |
+  | Tirs subis       | Y      | [Fact-based]                  |
+  | Efficacité (%)   | E%     | [Fact-based]                  |
+
+  ## Performances Individuelles
+  ### 🔥 Les Buteurs
+  | Joueur                   | Buts | Tirs | Efficacité |
+  |-------------------------|------|------|------------|
+  | Player1                  | X    | Y    | Z%         |
+  | Player2                  | X    | Y    | Z%         |
+  | ...                      | ...  | ...  | ...        |
+
+  ---
+
+  ### Focus individuel : [Player Name]
+
+  **Poste(s) occupé(s) :** [Positions]
+
+  **Statistiques offensives :**
+  - X buts marqués
+  - X passes décisives
+  - X tirs tentés
+  - [Other stats]
+
+  **Statistiques défensives et jeu collectif :**
+  - [Defensive stats]
+
+  **Observation coach :**
+  - [Coach notes]
+
+  **Points à améliorer :**
+  - [Improvements]
+
+  **Synthèse :**
+  [Player summary]
+
+  ### Les passes décisives
+  | Joueur            | Passes décisives |
+  |-------------------|------------------|
+  | Player1           | X                |
+  | Player2           | Y                |
+  | ...               | ...              |
+
+  ## Répartition temporelle
+  | Tranche (min) | Buts marqués |
+  |---------------|--------------|
+  | 0-9           | X            |
+  | 10-19         | Y            |
+  | 20-29         | Z            |
+  | 30-39         | W            |
+  | 40-49         | V            |
+
   ## Analyse du Momentum
   ### Évolution du score
-  - Timeline: 0-0 (0') → 1-0 USAO (5') → 1-1 (12') → ...
-  
+  0-0 (0') → 1-0 (X') → ... → [Final score] ([time]')
+
   ### Fenêtres de scoring
-  | Équipe | Période | Buts | Durée | Momentum |
-  |--------|---------|------|-------|----------|
-  | USAO | 5'-13' | 3 buts | 8 min | 🔥 Fort |
-  | Adversaire | 20'-25' | 2 buts | 5 min | ⚠️ Moyen |
-  
+  | Équipe | Période   | Buts | Durée | Momentum |
+  |--------|-----------|------|-------|----------|
+  | [TEAM] | X'-Y'     | Z    | W min | 🔥 Fort  |
+  | ...    | ...       | ...  | ...   | ...      |
+
   ### Résilience
-  - Temps moyen de réaction après but encaissé: X minutes
-  - Buts marqués dans les 3 minutes suivant un but encaissé: Y/Z
-  
+  Temps moyen de réaction après but encaissé : X minutes
+  Buts marqués dans les 3 minutes suivant un but encaissé : Y/Z
+
   ### Phases de pression
-  - Périodes de domination USAO: [list time ranges]
-  - Périodes de domination adverse: [list time ranges]
+  Périodes de domination [TEAM] : [ranges]
+  Périodes de domination adverse : [ranges]
+
   ## Points forts
   1. [Fact-based]
-  
+  2. [Fact-based]
+  3. [Fact-based]
+
   ## Améliorations possibles
   1. [Fact-based]
-  
-  ## Recommandations  
+  2. [Fact-based]
+
+  ## Recommandations
   1. [Data-driven]
-  
-  
+  2. [Data-driven]
+
   ## Conclusion
   [Factual synthesis]
-  
+
   ---
-  
+
   ## Sources
   - {matchday}.json
   - parsed_by_side.csv
   - match_summary.md
   - INDEX.md
   ```
+  **⚠️ FORMAT COMPLIANCE**: The output MUST exactly match this template structure. Do not add, remove, or modify sections, headings, or table formats. Fill in factual data only where indicated.
 - Persist in `.memory-bank/`.
 - **Post-Analysis**: 
   - Move screenshots from `.memory-bank/feed/` to `.memory-bank/competitions/analysis/{matchday}/`
