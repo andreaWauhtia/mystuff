@@ -17,8 +17,9 @@ Use slash commands to interact. Commands can invoke agents for autonomous proces
 1. **/analyze-match [matchday]**  
    Invoke the performance-analyser agent for end-to-end match analysis.  
    Example: `/analyze-match 2025-11-07`
-   - Place les screenshots SportEasy dans `.memory-bank/feed/` avant d’exécuter cette commande.
-   - L’agent utilise la vision native pour extraire la date et les événements directement depuis les images.
+   - Attachez les screenshots SportEasy directement dans la discussion avant d’exécuter la commande.
+   - L’agent utilise la vision native pour extraire le texte des images, construit un JSON brut, puis colle le JSON, le Markdown et les images dans le dossier `.memory-bank/competitions/analysis/{matchday}/`.
+   - Après cette étape d’extraction, `parse_timeline.py` est exécuté pour classifier les événements.
 
 2. **/scout-player [player_name]**  
    Invoke the player-scout agent for individual player evaluation.  
@@ -38,6 +39,18 @@ Use slash commands to interact. Commands can invoke agents for autonomous proces
 6. **/help-coach**  
    Display detailed help and available commands.
 
+7. **/provision-match [matchday]**  
+   Provision and validate match analysis folder using `match_memory_guard.py`.  
+   Example: `/provision-match 2025-11-07`
+
+8. **/validate-report [report_path]**  
+   Validate report structure against template using `report_template_validator.py`.  
+   Example: `/validate-report .memory-bank/competitions/analysis/2025-11-07/rapport_analyse_complete.md`
+
+9. **/archive-match [matchday]**  
+   Archive completed match analysis using `archive_match.py`.  
+   Example: `/archive-match 2025-11-07`
+
 ## Agent Integration
 This chat mode serves as the interface to invoke specialized agents:
 
@@ -52,10 +65,17 @@ Agents execute autonomously but can be guided through this chat interface.
 ### Match Analysis Flow
 ```mermaid
 graph TD
-    A[User: /analyze-match 2025-11-07] --> B[Chat Mode invokes Performance Agent]
-    B --> C[Agent processes screenshots and data]
-    C --> D[Agent generates reports]
-    D --> E[Chat Mode summarizes results]
+    A[User: /provision-match 2025-11-07] --> B[Chat Mode runs match_memory_guard.py]
+    B --> C[User attaches SportEasy screenshots]
+    C --> D[User: /analyze-match 2025-11-07]
+    D --> E[Chat Mode invokes Performance Agent]
+    E --> F[Agent processes screenshots and data]
+    F --> G[Agent generates reports]
+    G --> H[User: /validate-report path]
+    H --> I[Chat Mode runs report_template_validator.py]
+    I --> J[User: /archive-match 2025-11-07]
+    J --> K[Chat Mode runs archive_match.py]
+    K --> L[Chat Mode summarizes results]
 ```
 
 ### Player Scouting Flow
@@ -67,8 +87,8 @@ graph TD
     D --> E[Chat Mode presents insights]
 ```
 
-## Data Sources
-- **Match Data**: SportEasy timeline screenshots in `.memory-bank/feed/`
+-## Data Sources
+- **Match Data**: SportEasy timeline screenshots que vous attachez à la discussion ; l’agent lit leur contenu via la vision native et stocke JSON/MD/images dans `.memory-bank/competitions/analysis/{matchday}/`
 - **Roster**: Player profiles in `.memory-bank/roster/`
 - **Training Reports**: Session evaluations in `.memory-bank/trainings/report/`
 - **Competition Reports**: Match analyses in `.memory-bank/competitions/`
@@ -78,18 +98,21 @@ All outputs are persisted in the appropriate `.memory-bank/` subdirectories for 
 This mode ensures coaches have both conversational support and powerful autonomous analysis capabilities.
 
 ## Pré-analyse obligatoire
-- Avant tout `/analyze-match`, vérifiez que `.memory-bank/feed/` contient au moins un fichier `.jpg`.
-- Si aucun fichier n’est détecté, invitez l’utilisateur à ajouter les captures SportEasy dans `.memory-bank/feed/` puis relancez la commande.
-- Une fois les images listées, le dispatcher doit lancer immédiatement l’analyse visuelle sans s’arrêter sur la simple consultation du dossier.
+- Avant tout `/analyze-match`, vérifiez que la discussion contient au moins un screenshot SportEasy attaché.
+- Si aucun screenshot n’est présent, invitez l’utilisateur à l’ajouter à la discussion avant de relancer la commande.
+- Une fois les images disponibles, lancez immédiatement l’analyse visuelle via la vision native sans rester bloqué sur la simple consultation des pièces jointes.
 
 ## Workflow modifié
 
-1. L’utilisateur place les screenshots dans `.memory-bank/feed/`
-2. L’agent détecte les images et les analyse avec la vision native
-3. L’agent extrait la date du match et les événements
-4. L’agent génère le JSON et lance le script Python
-5. L’agent crée le template `match_summary.md` et attend la confirmation utilisateur
-6. Après confirmation, l’agent génère le rapport final et archive les données
+1. **Préparation**: Utilisez `/provision-match 2025-11-07` pour créer et valider le dossier `.memory-bank/competitions/analysis/{matchday}/` avec les sous-dossiers requis (appelle `match_memory_guard.py`).
+2. L’utilisateur attache les screenshots SportEasy à la discussion.
+3. L’agent utilise sa vision native pour extraire le texte, la date et les événements visibles dans chaque image.
+4. Le JSON brut, le résumé Markdown et les images originales sont collés (copiés) dans `.memory-bank/competitions/analysis/{matchday}/`.
+5. Après cette étape d’extraction, `parse_timeline.py` est exécuté pour classifier les événements par équipe.
+6. L’agent crée le template `match_summary.md` et attend la confirmation utilisateur.
+7. Après confirmation, l’agent génère le rapport final `rapport_analyse_complete.md`.
+8. **Validation**: Utilisez `/validate-report` pour vérifier que le rapport respecte le template (appelle `report_template_validator.py`).
+9. **Archivage**: Utilisez `/archive-match 2025-11-07` pour archiver l'analyse terminée dans `completed-tasks/competitions/match_reports/{matchday}/` et nettoyer la mémoire de travail (appelle `archive_match.py`).
 
 ## Usage Restrictions
 
